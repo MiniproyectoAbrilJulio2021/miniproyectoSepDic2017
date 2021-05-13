@@ -98,7 +98,7 @@ public class RegistroControllerTest {
         //Try access to this route and check de ModelMaps attributes 
         mockMvc.perform(get("/registro").param("new","true"))
                 .andExpect(status().isOk())
-                .andExpect(model().attribute("valueSubmit", equalTo("Register")))
+                .andExpect(model().attribute("valueSubmit", equalTo("Check In")))
                 .andExpect(model().attribute("isRegistro", equalTo("1")))
                 .andExpect(model().attribute("materias", equalTo(list)))
                 .andExpect(model().attribute("registro", equalTo(new Registro())));
@@ -129,7 +129,7 @@ public class RegistroControllerTest {
                 .param("password", registro.getPassword())
                 .param("passwordConf", registro.getPasswordConf()))
                 .andExpect(status().isOk())
-                .andExpect(model().attribute("valueSubmit", equalTo("Registrarse")))
+                .andExpect(model().attribute("valueSubmit", equalTo("Check In")))
                 .andExpect(model().attribute("isRegistro", equalTo("1")))
                 .andExpect((model().hasErrors()))
                 .andExpect(model().attributeHasFieldErrorCode("registro", "passwordConf", "error.registro"));
