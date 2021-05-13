@@ -1,0 +1,35 @@
+1) Crea una cuenta en heroku
+
+2) Descargar e instalar Heroku Cli, es una interfaz de linea de comandos para heroku
+ 
+3) Una vez instalado el Cli logearse con la cuenta que creo en 1) con el siguiente comnado
+	> heroku login
+
+4) Crear una aplicacion , nota que el comando te dira el nombre de la aplicacion en la salida 
+, digamos que heroku le puso el nombre sushi69, el link completo para conectarse luego a la aplicacion 
+esta en tu pagina de usuario en el proyecto sushi69 en settings
+
+	> heroku create
+	
+5) Le pedimos a heroku que cree una base de datos para nuestra app ( nota que puedes escoger la version de postgres con --version)
+
+	> heroku addons:create heroku-postgresql:hobby-dev --version=9.6 --app sushi69
+	
+6) Correr el siguiente comando para generar el esquema y las tablas de la base de datos 
+
+	> cat heroku_aledania.sql | heroku pg:psql --app sushi69 
+	
+7) Debemos modificar los archivos de configuracion (hibernate.cfg.xml y jdbc.properties) de la aplicacion para que usen los datos del postgres de heroku 
+para eso debemos modificar y cambiar los usuarios claves y urls que se mencionen por las siguientes variables de entorno 
+
+	${JDBC_DATABASE_URL}
+	${JDBC_DATABASE_USERNAME}
+	${JDBC_DATABASE_PASSWORD}
+	
+8) una vez modificada la configuracion generar un .war del proyecto, digamos Proyecto.war
+
+9) finalmente hacemos deploy hacia heroku con el siguiente comando (Nota que con --webapp-runner estableces la version de Tomcat)
+
+	> heroku war:deploy Proyecto.war --webapp-runner 8.5.50.0 --app sushi69
+	
+10) Listo ahora la aplicacion deberia estar arriba en el link que mencionamos en 4)

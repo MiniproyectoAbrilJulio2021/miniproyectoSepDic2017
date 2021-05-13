@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.howtodoinjava.controller;
+package com.calclogic.controller;
 
-import com.howtodoinjava.entity.Predicado;
-import com.howtodoinjava.entity.Simbolo;
-import com.howtodoinjava.entity.Teoria;
-import com.howtodoinjava.forms.AgregarSimbolo;
-import com.howtodoinjava.forms.AgregarTeorema;
-import com.howtodoinjava.forms.InferResponse;
-import com.howtodoinjava.forms.ModificarAliasForm;
-import com.howtodoinjava.forms.ModificarForm;
-import com.howtodoinjava.forms.MostrarCategoriaForm;
-import com.howtodoinjava.forms.Registro;
-import com.howtodoinjava.forms.UsuarioGuardar;
-import com.howtodoinjava.forms.teoremasSolucion;
-import com.howtodoinjava.service.TerminoManager;
-import com.howtodoinjava.service.UsuarioManager;
-import com.howtodoinjava.service.SimboloManager;
-import com.howtodoinjava.service.TeoriaManager;
+import com.calclogic.entity.Predicado;
+import com.calclogic.entity.Simbolo;
+import com.calclogic.entity.Teoria;
+import com.calclogic.forms.AgregarSimbolo;
+import com.calclogic.forms.AgregarTeorema;
+import com.calclogic.forms.InferResponse;
+import com.calclogic.forms.ModificarAliasForm;
+import com.calclogic.forms.ModificarForm;
+import com.calclogic.forms.MostrarCategoriaForm;
+import com.calclogic.forms.Registro;
+import com.calclogic.forms.UsuarioGuardar;
+import com.calclogic.forms.teoremasSolucion;
+import com.calclogic.service.TerminoManager;
+import com.calclogic.service.UsuarioManager;
+import com.calclogic.service.SimboloManager;
+import com.calclogic.service.TeoriaManager;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -48,8 +48,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import static org.mockito.Mockito.mock;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-import com.howtodoinjava.entity.Usuario;
-import com.howtodoinjava.service.UsuarioManager;
+import com.calclogic.entity.Usuario;
+import com.calclogic.service.UsuarioManager;
 import javax.servlet.http.HttpSession;
 import static org.hamcrest.CoreMatchers.*;
 import org.springframework.http.MediaType;

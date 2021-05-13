@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.howtodoinjava.controller;
+package com.calclogic.controller;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -27,8 +27,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import static org.mockito.Mockito.mock;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-import com.howtodoinjava.entity.Usuario;
-import com.howtodoinjava.service.UsuarioManager;
+import com.calclogic.entity.Usuario;
+import com.calclogic.service.UsuarioManager;
 import javax.servlet.http.HttpSession;
 import static org.hamcrest.CoreMatchers.*;
 import org.springframework.http.MediaType;

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.howtodoinjava.controller;
+package com.calclogic.controller;
 
-import com.howtodoinjava.entity.Materia;
-import com.howtodoinjava.entity.Usuario;
-import com.howtodoinjava.service.MateriaManager;
-import com.howtodoinjava.service.UsuarioManager;
+import com.calclogic.entity.Materia;
+import com.calclogic.entity.Usuario;
+import com.calclogic.service.MateriaManager;
+import com.calclogic.service.UsuarioManager;
 import java.util.List;
 import static org.hamcrest.CoreMatchers.equalTo;
 import org.junit.After;
@@ -31,8 +31,8 @@ import org.junit.runner.RunWith;
 import org.junit.Test;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
-import com.howtodoinjava.forms.Registro;
-import com.howtodoinjava.service.ResuelveManager;
+import com.calclogic.forms.Registro;
+import com.calclogic.service.ResuelveManager;
 import org.apache.commons.codec.digest.DigestUtils;
 import static org.mockito.Mockito.mock;
 import org.springframework.http.MediaType;
