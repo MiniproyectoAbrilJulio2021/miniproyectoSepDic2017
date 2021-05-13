@@ -15,13 +15,14 @@
 			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
                         <!--<url>file:///home/federico/NetBeansProjects/Aledania/target/Aledania/WEB-INF/lib</url>-->
 		</repository>
-                <repository>
-          <id>Central Maven repository</id>
-          <name>Central Maven repository https</name>
-          <url>https://repo.maven.apache.org/maven2</url>
-       </repository>
+    <repository>
+      <id>Central Maven repository</id>
+      <name>Central Maven repository https</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
 	</repositories>
   <properties>
+    <full-artifact-name>target/${project.artifactId}.war</full-artifact-name>
     <org.springframework.version>4.3.18.RELEASE</org.springframework.version>
     <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     <jackson.version>2.6.3</jackson.version>
@@ -483,7 +484,7 @@
         <artifactId>heroku-maven-plugin</artifactId>
         <version>2.0.11</version>
         <configuration>
-          <appName>herokucdtest</appName>
+          <appName>miniproyecto-abr-jul-2021</appName>
           <processTypes>
             <web>java $JAVA_OPTS -jar webapp-runner.jar -Dserver.port=$PORT
               ${full-artifact-name}</web>
