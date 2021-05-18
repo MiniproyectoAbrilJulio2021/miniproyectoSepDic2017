@@ -16,4 +16,5 @@ jobs:
       - name: Clean for Maven
         run: mvn clean
       - name: Build with Maven
-        run: mvn -X --batch-mode --update-snapshots verify --settings ./.mvn/custom-settings.xml
+        # run: mvn -X --batch-mode --update-snapshots verify --settings ./.mvn/custom-settings.xml
+        run: mvn -X --batch-mode --update-snapshots verify
