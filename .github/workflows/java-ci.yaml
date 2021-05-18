@@ -17,3 +17,12 @@ jobs:
         run: mvn clean
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify --settings ./.mvn/custom-settings.xml
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      # - name: 
+      # - name: Run Tests
+      #   run: mvn test -B bash <(curl -s https://codecov.io/bash)
+      # - name: Deploy to Heroku
+      #   run: echo "Deploying to Heroku"
+# - mvn heroku:deploy-war
