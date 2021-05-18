@@ -25,3 +25,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "miniproyecto-abr-jul-2021"
           heroku_email: "15-10463@usb.ve"
+      - name: Deploy App on Heroku
+        run: mvn heroku:deploy-war
