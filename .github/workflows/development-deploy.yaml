@@ -1,4 +1,4 @@
-name: Java CI
+name: Development Heroku
 
 on: [push]
 
@@ -19,10 +19,9 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify --settings ./.mvn/custom-settings.xml
       - uses: codecov/codecov-action@v1
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-      # - name: 
-      # - name: Run Tests
-      #   run: mvn test -B bash <(curl -s https://codecov.io/bash)
-      # - name: Deploy to Heroku
-      #   run: echo "Deploying to Heroku"
-# - mvn heroku:deploy-war
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "miniproyecto-abr-jul-2021"
+          heroku_email: "15-10463@usb.ve"
